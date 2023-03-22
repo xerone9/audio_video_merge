@@ -8,11 +8,6 @@ import os
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
 
-get_files = os.path.expanduser("~\desktop\\get files\\")
-paste_files = os.path.expanduser("~\desktop\\paste files\\")
-
-already_converted_files = []
-
 
 def selectInputFolder():
     folder_path = filedialog.askdirectory()
@@ -21,6 +16,7 @@ def selectInputFolder():
     else:
         input_file_address.configure(text=folder_path, text_color="white")
         root.update()
+        
 
 def selectOutputFolder():
     folder_path = filedialog.askdirectory()
